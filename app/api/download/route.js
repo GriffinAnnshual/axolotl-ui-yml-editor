@@ -50,7 +50,7 @@ export const POST = async (req, res) => {
 		const old_file = file_name.replaceAll(" ", "_") 
 		const filename ="new_" + file_name.replaceAll(" ", "_") 
 		const yamlContent = yaml.dump(json)
-		const filePath = path.join(process.cwd(), "/public/uploads/",filename)
+		const filePath = path.join(process.cwd(), "/tmp",filename)
 		await fs.promises.writeFile(filePath, yamlContent, "utf8")
 
 		const stats= await fs.promises.stat(filePath)    
@@ -63,7 +63,7 @@ export const POST = async (req, res) => {
 				"content-length": stats.size + "",
 			}),
 		})
-		deleteFilesInFolder(path.join(process.cwd(), "/public/uploads/"))
+		deleteFilesInFolder(path.join(process.cwd(), "/tmp"))
 		return res
 
 	} catch (error) {

@@ -38,12 +38,12 @@ export const POST = async (req, res) => {
 
   try {
     await writeFile(
-      path.join(process.cwd(), "/public/uploads/" + filename),
+      path.join(process.cwd(), "/tmp" + filename),
       buffer
     );
     
     const yamlContent = await fs.readFile(
-			path.join(process.cwd(), "/public/uploads/" + filename),
+			path.join(process.cwd(), "/tmp" + filename),
 			"utf8"
 		)
     // Convert Yaml to JSON
@@ -52,7 +52,7 @@ export const POST = async (req, res) => {
     const jsonString = JSON.stringify(data, null, 2)
     // Write File
     await fs.writeFile(
-			path.join(process.cwd(), "/public/uploads/" + filename),
+			path.join(process.cwd(), "/tmp" + filename),
 			jsonString,
 			"utf8"
 		)

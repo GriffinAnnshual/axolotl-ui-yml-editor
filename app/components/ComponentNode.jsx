@@ -10,7 +10,6 @@ import {
 function 	ComponentNode({ children, onChange }) {
 	const handleChangeData = (event) => {
 		let newValue = event.target.value
-
 		// Convert the value to the appropriate type
 		if (newValue === "true") {
 			newValue = true
@@ -18,10 +17,12 @@ function 	ComponentNode({ children, onChange }) {
 			newValue = false
 		} else if (newValue === "0") {
 			newValue = 0
-		} else if (newValue === "" || newValue === "null") {
+		} else if (newValue === "null") {
 			newValue = null
 		} else if (!isNaN(newValue)) {
 			newValue = parseFloat(newValue)
+		} else{
+			newValue = String(newValue)
 		}
 
 		onChange(newValue)

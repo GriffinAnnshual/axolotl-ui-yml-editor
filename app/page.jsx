@@ -69,6 +69,7 @@ export default function Home() {
 					</div>
 				</div>
 				<Editor
+					setJson={setJson}
 					isLoaded={isLoaded}
 					jsonContent={json}
 				/>

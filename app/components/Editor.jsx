@@ -1,10 +1,9 @@
 import React from 'react'
 import YamlEditor from "@focus-reactive/react-yaml"
 import {useRef, useEffect} from 'react'
-function Editor({ jsonContent, isLoaded }) {
+function Editor({ jsonContent, isLoaded , setJson}) {
 	const handleChange = ({ json, text }) => {
-		// console.log(json)
-		console.log("hi")
+		setJson(json)
 	}
 	if (isLoaded) {
 		return (

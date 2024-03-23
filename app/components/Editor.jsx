@@ -7,7 +7,7 @@ function Editor({ jsonContent, isLoaded , setJson}) {
 	}
 	if (isLoaded) {
 		return (
-			<div className="w-[45%] mx-auto mt-[100px] pb-[3rem] h-[100vh] overflow-auto rounded-xl m-12  fixed bg-white border-2 border-black  ">
+			<div className="w-[45%]   mx-auto mt-[100px] pb-[3rem] h-[100vh] overflow-auto rounded-xl m-12  fixed bg-white border-2 border-black  ">
 				<YamlEditor
 					onChange={handleChange}
 					text="# Yaml code editor
@@ -18,11 +18,14 @@ function Editor({ jsonContent, isLoaded , setJson}) {
 	}
 	const actions = useRef(null)
 	useEffect(() => {
-		// Here we have access to imperative actions
 		actions.current.replaceValue({ json: jsonContent })
 	}, [jsonContent])
-	// const text = `${yamlContent}`
-
+	if(isLoaded)
+	return (
+		<>
+		Loading...
+		</>
+	)
 	return (
 		<div className="w-[45%] mx-auto mt-[100px] pb-[3rem] h-[100vh] overflow-auto rounded-xl m-12  fixed bg-white border-2 border-black  ">
 			<YamlEditor

@@ -55,12 +55,12 @@ export default function FileInput({setYaml, setJson , upperFile}) {
 	}
 
 	return (
-		<div className="text-white">
-			<div className="">
-				<h1 className="font-bold text-center text-2xl py-10">
-					UPLOAD YAML FILE TO CONTINUE...
-				</h1>
-				<div className="p-20">
+		<div className="text-white border-2 border-white ">
+			<div className="p-10">
+				<p className="pl-10  text-lg py-2">
+					UPLOAD YAML FILE TO LOAD!
+				</p>
+				<div className="p-[2%]">
 					<FileUploader
 						hoverTitle="Drop your files here"
 						handleChange={handleFile}
@@ -79,7 +79,7 @@ export default function FileInput({setYaml, setJson , upperFile}) {
 				)}
 			</div>
 			{msg && (
-				<span className="text-red-500 font-bold text-2xl h-full flex pt-[10%] pl-[30%] items-center ">
+				<span className="w-[90%] mx-auto">
 					{msg}
 				</span>
 			)}

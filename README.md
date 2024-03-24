@@ -35,3 +35,11 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 # Yml_Editor
+
+![image](https://github.com/GriffinAnnshual/axolotl-ui-yml-editor/assets/77448860/b7a394ef-0c33-4138-b2e9-e2b9dbb01cc6)
+
+
+![image](https://github.com/GriffinAnnshual/axolotl-ui-yml-editor/assets/77448860/9ed708c3-668b-440e-8557-854d58c1ed95)
+
+
+
